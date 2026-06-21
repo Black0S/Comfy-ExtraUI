@@ -1,2 +1,38 @@
-# MacOS
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (si jamais des outils de build sont ajoutés)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
+
+# OS divers
+Thumbs.db

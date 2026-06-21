@@ -1,0 +1,38 @@
+/* comfy-extra-ui — styles du chrome (barres, panneaux, dialogues…).
+ *
+ * ⚠️ UI en Vue + CSS "scoped" : cible la CLASSE (stable) + !important.
+ *    NE cible PAS data-v-XXXX (ce hash change à chaque update du frontend).
+ *    Pour trouver une classe : inspecte l'élément (clic droit → Inspecter).
+ */
+
+/* ════════════════════════════════════════════════════════════
+ *  BARRE DE GAUCHE — icônes / hover / sélection
+ *  Bouton : .side-bar-button · Icône (masque iconify) : .side-bar-button-icon
+ *  ⚠️ Les icônes sont colorées par `color` (background = currentColor côté iconify).
+ * ════════════════════════════════════════════════════════════ */
+
+/* Icône au repos : atténuée (couleur "muted" du thème) */
+.side-bar-button .side-bar-button-icon {
+  color: var(--p-text-muted-color, #8a8a8a) !important;
+  transition: color 0.12s ease, background-color 0.12s ease;
+}
+
+/* Survol : fond doux + icône vive */
+.side-bar-button:hover {
+  background-color: color-mix(in srgb, var(--fg-color) 9%, transparent) !important;
+}
+.side-bar-button:hover .side-bar-button-icon {
+  color: var(--fg-color, #ffffff) !important;
+}
+
+/* Onglet sélectionné : géré en INLINE par main.js (styleSelectedTab) car la
+ * cascade Vue/scoped empêche le CSS de gagner ici. Ne rien mettre ici. */
+
+/* ════════════════════════════════════════════════════════════
+ *  BARRE DU HAUT (onglets)           →  .workflow-tabs-container
+ * ════════════════════════════════════════════════════════════ */
+/*
+.workflow-tabs-container {
+  background: #15151a !important;
+}
+*/
